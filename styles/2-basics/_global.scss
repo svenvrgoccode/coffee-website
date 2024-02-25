@@ -1,13 +1,32 @@
 @use '../1-helpers-colors/mixins' as *;
 @use '../1-helpers-colors/variables' as *;
 
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: 0.3s ease-out;
+}
 
+::after,::before{
+  transition: 0.3s ease-out;
+}
+
+::selection{
+  background-color: $main1 ;
+  color: $txt2 ;
+}
 
 body{
   background-color: $main2;
 }
 
 
+.container{
+  max-width: 124rem ;
+  margin: auto;
+  padding: 0rem 2rem;
+}
 
 img {
   display: block;

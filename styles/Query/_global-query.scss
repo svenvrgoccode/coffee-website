@@ -2,3 +2,18 @@
 @use '../1-helpers-colors/variables' as *;
 
 
+@include breakpoint(tablet){
+    html{
+        font-size: 50%;
+    }
+}
+
+@include breakpoint(phone){
+    .btn{
+        font-size: 2rem;
+        padding: 2rem;
+    }
+    html{
+        font-size: 48%;
+    }
+}

@@ -2,3 +2,40 @@
 @use '../1-helpers-colors/variables' as *;
 
 
+footer{
+    padding: 0rem 2rem;
+    .container{
+    background: $element;
+    padding: 3rem;
+    margin-bottom: 4rem;
+    .row{
+        .wrap{
+            display: flex;
+            align-items: center;
+            gap: 6rem;
+        }
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        ul{
+            display: flex;
+            gap: 4rem;
+        }
+        .items{
+            display: flex;
+            gap: 2rem;
+            i{
+                color: $txt2;
+                font-size: 2rem;
+            }
+        }
+    }
+    a,i{
+    color: $txt3;
+    }
+    a{
+        font-weight: 600;
+        letter-spacing: 0.1rem;
+    }
+    }    
+}

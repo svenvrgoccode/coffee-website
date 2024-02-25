@@ -1,2 +1,20 @@
 @use '../1-helpers-colors/mixins' as *;
 @use '../1-helpers-colors/variables' as *;
+
+
+@include breakpoint(tablet){
+    footer{
+        .wrap{
+            flex-direction: column;
+
+        }
+        ul{
+            flex-direction: column;
+            text-align: center;
+            margin-bottom: 8rem;
+        }
+        .row{
+            flex-direction: column;
+        }
+    }
+}

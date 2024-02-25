@@ -3,3 +3,68 @@
 
 
 
+@include breakpoint(phone){
+    .hero-index{
+        .container{
+            background-image: url('/public/images/home/mobile/image-hero-coffeepress.jpg');
+            text-align: center;
+            @include flex(column,center,center,4rem);
+            p{
+                max-width: 30rem;
+            }
+        }
+    }
+    .collection-index{
+        padding: 4rem 0rem;
+        .big{
+            padding-bottom: 4rem;
+            transform: initial;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            position: relative;
+            font-size: 4rem;
+        }
+        .row{
+            flex-direction: column;
+            .col{
+                padding-bottom: 8rem;
+                img{
+                    margin: auto;
+                    width: 20rem;
+                }
+                p{
+                    max-width: 30rem;
+                    margin: auto;
+                }
+            }
+        }
+    }
+    .why-index{
+        .row:last-of-type{
+            flex-direction: column;
+        }
+    }
+    .how-index{
+        h2,h1{
+            margin: auto;
+        }
+        .btn,h4{
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            width: fit-content;
+        }
+        .row:nth-of-type(3){
+            flex-direction: column !important;
+            .col{
+                width: 100%;
+                text-align: center;
+            }
+        }
+        .lines{
+            display: none !important;
+        }
+    }
+}

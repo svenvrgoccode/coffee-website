@@ -1,0 +1,229 @@
+@use '../1-helpers-colors/mixins' as *;
+@use '../1-helpers-colors/variables' as *;
+
+
+.hero-plan{
+    padding: 2rem 2rem;
+    .container{
+        border-radius: 1.2rem;
+        padding: 4rem;
+        background-image: url('/public/images/plan/desktop/image-hero-blackcup.jpg');
+        height: 50rem;
+
+        @include background;
+        @include flex(column,center,flex-start,2rem);
+        h1{
+        max-width:  80rem;
+        color: $txt2 ;
+        font-weight: 800;
+        }
+        p{
+            color: $txt2 ;
+            max-width: 40rem;
+        }
+    }
+}
+
+.how-plan{
+    margin: 8rem 0rem;
+    margin-top: 4rem;
+    h1{
+        color: $main4;
+        font-weight: bold;
+    }
+    h4{
+        color: $txt3;
+    }
+    padding: 0rem 2rem;
+    .container{
+        border-radius: 1.2rem;
+        padding: 4rem;
+        background: $element;
+
+        .row:nth-of-type(2){
+            display: flex;
+            justify-content: space-between;
+            .hero-index{
+                .circle{
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+            .col{
+                h1{
+                    margin-top: 14rem;
+                    height: fit-content;
+                    color: $txt4;
+                }
+                h2{
+                    font-weight: 600;
+                    max-width: 20rem;
+                }
+                @include flex(column,center,flex-start,2rem);
+                p{
+                    max-width: 30rem;
+                }
+            }
+            .col:last-of-type{
+                h1::after{
+                    display: none;
+                }
+            }
+        }
+        .lines{
+            margin-top: 6rem;
+            display: flex;
+            justify-content: space-between;
+            .col{
+                min-width: calc(33.3% + 0.6rem);
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+            }
+            .line{
+                display: block;
+                height: 0.3rem;
+                width: 100%;
+                background: $main4;
+            }
+            .circle{
+                border-radius: 20rem;
+                width: 3rem;
+                height:3rem ;
+                border: 1px solid $main1;
+            }
+        }
+        .steps-row{
+            margin-bottom: 6rem;
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            .col{
+                width: calc(33.3%);
+                @include flex;
+            }
+        }
+        .row:nth-of-type(3){
+            margin-top: 6rem;
+        }
+    }
+    h2,p{
+        color: $txt2 ;
+    }
+    h1{
+        margin-top: 6rem !important;
+    }
+}
+
+.question-plan{
+    padding: 4rem 2rem;
+    .accordion-row{
+        display: flex;
+        .col:first-of-type{
+            width: 70%;
+            .row{
+                position: relative;
+                font-size: 3.6rem;
+                color: $txt3;
+              font-family: "Fraunces", sans-serif;
+              font-weight: bold;
+
+            }
+            .row::after{
+                margin: 2rem 0rem;
+                content: '';
+                display: block;
+                height: 1px;
+                background: $grey;
+                width: 60%;
+            }
+        }
+        .col:last-of-type{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10rem;
+        }
+        .heading{
+            cursor: pointer;
+            color: $txt3;
+            font-family: "Fraunces", sans-serif;
+            font-weight: bold;
+            font-size: 4.2rem;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            i{
+                font-size: 2.4rem;
+                color: $main1;
+            }
+
+        }
+        .fa-angle-down{
+            transition: 0.3s ease-out;
+        }
+        .fa-angle-down.active{
+            transform: rotate(180deg);
+    }
+        .content{
+            display: flex;
+            gap: 2em;
+            margin-top: 4rem;
+            display: none;
+            .card{
+
+                cursor: pointer;
+                border-radius: 1.2rem;
+                padding: 2rem;
+                display: flex;
+                background: $element3;
+                @include flex;
+                width: calc(100% / 3);
+            }
+            .card.active{
+                background: $main1;
+                h4,p{
+                color: $txt2;
+                }
+            }
+        }
+        .content.active{
+            display: flex;
+        }
+    }
+    .card-summary{
+        margin-left: auto;
+        background: $element;
+        padding: 8rem ;
+        width: fit-content;
+        border-radius: 1.2rem;
+        margin-top: 6rem;
+        margin-bottom: 6rem;
+        @include flex;
+        h4,p{
+            max-width: 50rem;
+            color: $txt2;
+        }
+        h4{
+            color: $txt3;
+           font-family: "Barlow", sans-serif;
+        }
+        p{
+            font-weight: bold;
+            font-size: 2.4rem;
+            font-family: "Fraunces", sans-serif;
+            span{
+                color: $main1;
+            }
+        }
+    }
+    .btn-row{
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+.accord-click.active{
+    color: $main1 !important;
+}

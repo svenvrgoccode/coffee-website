@@ -6,9 +6,25 @@
     background-repeat: no-repeat;
   }
 
+  @mixin flex($direction: column,$justify: center,$align: flex-start,$gap: 2rem){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+  }
+
+  @mixin flex2($gap: 2rem){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: $gap;
+  }
+
   @mixin breakpoint($point) {
     @if $point == phone {
-      @media (max-width: 599px) {
+      @media (max-width: 699px) {
         @content;
       }
     }

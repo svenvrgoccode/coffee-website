@@ -1,0 +1,69 @@
+@use '../1-helpers-colors/mixins' as *;
+@use '../1-helpers-colors/variables' as *;
+
+
+
+@include breakpoint(phone){
+    .hero-about{
+        .container{
+        background-image: url('/public/images/about/mobile/image-hero-whitecup.jpg');
+        align-items: center;
+        text-align: center;
+        }
+    }
+    .commit-about{
+        .container{
+            .col{
+                width: 100%;
+            }
+            .row{
+                flex-direction: column;
+            }
+        }
+    }
+    .quality-about{
+        .container{
+            .row{
+                gap: 2rem;
+                align-items: center;
+                flex-direction: column;
+                .col{
+                    width: 100%;
+                    transform: translateY(-4rem);
+                }
+                .col:nth-of-type(1){
+                    padding: 2rem;
+                    h3{
+                        margin: auto;
+                    }
+                    text-align: center;
+                    order: 2;
+                }
+            }
+        }
+        .desk{
+            display: none;
+        }
+        .mob{
+            display: block;
+            transform: initial;
+        }
+    }
+    .headquarters-about{
+        .row{
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            gap: 6rem !important;
+            .col{
+                img,ul{
+                    width: 100%;
+                }
+                li,h3{
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

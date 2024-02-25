@@ -1,0 +1,84 @@
+@use '../1-helpers-colors/mixins' as *;
+@use '../1-helpers-colors/variables' as *;
+
+
+.hero-about{
+    padding: 2rem 2rem;
+    .container{
+        border-radius: 1.2rem;
+        padding: 4rem;
+        background-image: url('/public/images/about/desktop/image-hero-whitecup.jpg');
+        height: 50rem;
+        @include background;
+        @include flex(column,center,flex-start,2rem);
+        h1{
+        max-width:  80rem;
+        color: $txt2 ;
+        font-weight: 800;
+        }
+        p{
+            color: $txt2 ;
+            max-width: 40rem;
+        }
+    }
+}
+.commit-about{
+    padding: 4rem 0rem;
+    .row{
+        display: flex;
+        gap: 4rem;
+        img{
+            border-radius: 1.2rem;
+            width: 100%;
+        }
+        .col{
+            width: 50%;
+            @include flex;
+        }
+    }
+}
+
+.quality-about{
+    padding: 14rem 2rem;
+    padding-bottom: 8rem;
+    h3,p{
+        color: $txt2;
+    }
+    .container{
+        border-radius: 1.2rem;
+        background: $element2;
+    }
+    .row{
+        display: flex;
+        gap: 4rem;
+        .col{
+            width: 50%;
+            @include flex;
+        }
+    }
+    img{
+        width: 100%;
+        transform: translateY(-10rem);
+        border-radius: 1.2rem;
+    }
+    .mob{
+        display: none;
+    }
+}
+
+.headquarters-about{
+padding: 4rem 0rem;
+.row{
+    padding: 4rem;
+}
+.row:nth-of-type(2){
+    display: flex;
+    gap: 16rem;
+    .col{
+        @include flex;
+        ul{
+            @include flex2(1rem)
+        }
+    }
+}
+}

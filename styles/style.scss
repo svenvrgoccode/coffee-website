@@ -8,6 +8,8 @@
 //  ============- PAGES =======================
 
 @use './3-pages/index';
+@use './3-pages/about';
+@use './3-pages/plan';
 
 
 //  ============- HEADER / FOOTER =======================
@@ -27,6 +29,8 @@
 
 
 @use './Query/index-query';
+@use './Query/about-query';
+@use './Query/plan-query';
 @use './Query/global-query';
 @use './Query/footer-query';
 @use './Query/header-query';

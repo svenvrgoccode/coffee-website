@@ -2,3 +2,66 @@
 @use '../1-helpers-colors/variables' as *;
 
 
+@include breakpoint(phone){
+    header{
+        .hamburger-wrap{
+            display: flex;
+        }
+        .nav-dropdown{
+            position: fixed;
+            top: 10rem;
+            background: linear-gradient(to bottom,#FEFCF7,#fefcf7a6);;
+            width: 100%;
+            height: 100vh;
+            top: 0;
+            border: 0.6rem;
+            z-index: 100;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.3s ease-out;
+            @include flex(column,center,center,2rem);
+            ul{
+                flex-direction: column;
+                text-align: center;
+            }
+            li:last-of-type{
+                    max-width: 30rem;
+            }
+            li{
+            font-family: "Fraunces", sans-serif;
+            a{
+            font-size: 3.6rem;
+            position: relative;
+            right: 100%;
+            transition: 0.6s ease-out;
+            line-height: 1.6;
+            }
+            a::after{
+                content: '';
+                position: absolute;
+                width: 3rem;
+                height: 3rem;
+                background: $main4;
+                display: block;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -6rem;
+                border-radius: 20rem;
+            }
+            }
+        }
+        .nav-dropdown.active{
+            opacity: 1;
+            pointer-events: all;
+            a{
+                right: 0%;
+            }
+        }
+        .hamburger{
+            display: block !important;
+            i{
+                font-size: 4rem;
+            }
+        }
+    }
+}
